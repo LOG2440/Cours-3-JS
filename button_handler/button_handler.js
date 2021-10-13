@@ -7,7 +7,7 @@ const ButtonHandler = {
   },
   addHandler: function () {
     const button = document.getElementById("btn");
-    button.addEventListener("click",( () => this.getValue() ));
+    button.addEventListener("click",this.getValue);
   },
 };
 
