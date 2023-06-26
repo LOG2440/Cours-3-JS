@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemple de fonctions de rappel</title>
+  <script>
+    window.onload = () => {
+      document.getElementById("btn").addEventListener("click", function () {
+        console.log(`This from function expression : ${this}`);
+      }); // This from function expression : [object HTMLButtonElement]
+
+      function printThis() {
+        console.log(`This from function declaration : ${this}`);
+      }
+      document.getElementById("btn").addEventListener("click", printThis);
+      //"This from function declaration : [object HTMLButtonElement]"
+
+      document.getElementById("btn").addEventListener("click", (e) => {
+        console.log(`This from arrow function : ${this}`); //"This from arrow function : [object Window]"
+        console.log(`We should use e.target : ${e.target}`); //"We should use e.target : [object HTMLButtonElement]"
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Cliquez sur le bouton et ouvrez la console pour voir la différence entre les valeurs de l'objet <code>this</code>
+  </h3>
+  <button id="btn">
+    Cliquez moi!
+  </button>
+</body>
+
+</html>
