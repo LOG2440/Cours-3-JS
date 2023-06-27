@@ -1,3 +1,21 @@
+/*
+    L'héritage en JS se fait à travers la notion de Prototype qui est une autre instance d'objet JS
+    Chaque objet a une chaîne de prototypes (1 à la fois) jusqu'à "null"
+    Si on cherche un attribut d'un objet et on ne le trouve pas sur l'bojet, on remonte dans la chaîne jusqu'à la fin
+    Modifier le prototype d’un objet affecte toutes les instances avec le même prototype
+*/
+
+// Partage de méthodes à travers le Prototype
+const arr = [1, 2, 3, 4];
+Object.getPrototypeOf(arr).getLast = function () { return this[this.length - 1]; }
+arr.getFirst = function () { return this[0]; } // modification de l'instance "arr"
+const newArr = ['a', 'b', 'c', 'd']; // tous les tableaux partagent le même prototype
+const lastElement = newArr.getLast(); // 'd’
+const firstElement = newArr.getFirst(); // Erreur : newArr.getFirst is not a function
+
+
+// Exemple d'utilisation de prototypes avec des constructeurs
+
 function Person(name, age) {
   this.name = name;
   this.age = age;
@@ -44,5 +62,5 @@ Object.getPrototypeOf(michel).email = "michel@polymtl.ca";
 console.log(paul.email); // michel@polymtl.ca
 marie.email = "marie@polymtl.ca";
 console.log(marie); // Person { age :33, email: 'marie@polymtl.ca'}
-const eve = new Person("Eve",25);
+const eve = new Person("Eve", 25);
 console.log(eve.email); // undefined
