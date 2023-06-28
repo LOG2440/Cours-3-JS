@@ -51,6 +51,7 @@ function PersonFunction(personName, age) {
 PersonFunction.prototype.isOld = function () {
   return this.age >= 30;
 };
+
 const marie = new PersonFunction("Marie", 31);
 console.log(marie); // PersonFunction { age: 31}
 console.log(Object.getPrototypeOf(marie).hasOwnProperty("isOld")); // true
@@ -60,8 +61,9 @@ marie.isOld(); // true
 console.log(marie.name); // undefined
 
 
-
-// Héritage
+// Héritage 
+// La méthode super() doit être appelée avant d'utiliser this
+// super() est le constructeur de la classe parent
 class Student extends Person {
   constructor(name, age, id) {
     super(name, age); // nécessaire avant l'utilisation de this
@@ -71,3 +73,6 @@ class Student extends Person {
 const michel = new Student("Michel", 35, 1234);
 console.log(michel.name); // Michel
 
+// Attention à l'utilisation de fonctions qui font référence à this
+const isOld = michel.isOld;
+console.log(isOld()); // Cannot read properties of undefined (reading 'age')
