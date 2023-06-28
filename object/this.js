@@ -45,6 +45,7 @@ paul.printInfo(); // Paul is 25!
 paul.printInfo = () => {
   console.log(`${this.name} is ${this.age}!`);
 };
+paul.printInfo();
 
 // Fonction fléchée
 const obj2 = {
@@ -58,10 +59,12 @@ obj2.b(); // retourne undefined : Window.i n'existe pas
 obj2.c(); // retourne 10
 const obj3 = { i: 20 };
 
-// Utilisation de call()
+// Utilisation de call() : la fonction est appelée avec obj3 référé par "this" 
 obj2.c.call(obj3); // retourne 20
 obj2.b.call(obj3); // retourne toujours undefined
 
+
+// Changement de contexte lorsqu'on utilise une fonction hors de son objet
 const myButton = {
   content: "OK",
   click() {
@@ -70,9 +73,11 @@ const myButton = {
 };
 
 myButton.click(); // OK clicked
-let looseClick = myButton.click; // hors de l'objet
+const looseClick = myButton.click; // hors de l'objet
 looseClick(); // undefined clicked
-let boundClick = myButton.click.bind(myButton);
+
+// Utilisation de bind() : lorsque la fonction sera appelée, "this" fera référence à myButton 
+const boundClick = myButton.click.bind(myButton);
 boundClick(); //OK clicked
 
 /*

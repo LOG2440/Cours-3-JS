@@ -11,7 +11,7 @@ Object.getPrototypeOf(arr).getLast = function () { return this[this.length - 1];
 arr.getFirst = function () { return this[0]; } // modification de l'instance "arr"
 const newArr = ['a', 'b', 'c', 'd']; // tous les tableaux partagent le même prototype
 const lastElement = newArr.getLast(); // 'd’
-const firstElement = newArr.getFirst(); // Erreur : newArr.getFirst is not a function
+// const firstElement = newArr.getFirst(); // Erreur : newArr.getFirst is not a function
 
 
 // Exemple d'utilisation de prototypes avec des constructeurs
@@ -48,9 +48,13 @@ console.log(marie.__proto__.__proto__.__proto__.__proto__); // null
 Object.getPrototypeOf(marie).incrementAge = function (step = 1) {
   this.age += step;
 };
+
+console.log(Object.hasOwn(marie, "incrementAge")); //false
+console.log(Object.hasOwn(paul, "incrementAge")); // true
+
 marie.incrementAge(2);
 console.log(marie.age); // 33
-paul.incrementAge(1);
+paul.incrementAge();
 console.log(paul.age); //26
 
 const michel = new Person("Michel", 45);
