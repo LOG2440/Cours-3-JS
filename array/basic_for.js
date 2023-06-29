@@ -14,11 +14,7 @@ function iterate(array, predicate) {
 }
 
 const newArr = iterate([1, 42, 12, 5, -8, 37], x => x % 2 === 0);
-// Quel est le résultat ?
 console.log(newArr);
-
-// Quel nom plus clair peut on donner à cette fonction ?
-
 
 /// JS supporte do...while et while aussi
 

@@ -23,3 +23,9 @@ console.log(validUsers); // [ { id: 15 }, { id: 3 }]
 // Attention! : le résultat est un shallow copy du tableau original
 validUsers[1].id = 200; // 4e objet du tableau original
 console.log(users[3]); // {id: 200}
+
+// structuredClone permet une copie profonde
+users[3].id = 3;
+const deepCopy = structuredClone(users).filter(filterById);
+deepCopy[1].id = 200;
+console.log(users[3]); // {id: 3}

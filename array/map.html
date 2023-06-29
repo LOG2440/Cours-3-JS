@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthode Map</title>
+    <script>
+        const ingredients = ["45 ml (3 c. à soupe) de farine tout usage non blanchie",
+            "30 ml (2 c. à soupe) de cassonade",
+            "10 ml (2 c. à thé) de cacao",
+            "1 ml (¼ c. à thé) de poudre à pâte",
+            "45 ml (3 c. à soupe) de lait",
+            "15 ml (1 c. à soupe) d'huile de canola",
+            "1 goutte d'extrait de vanille",
+            "10 pépites de chocolat mi-sucré (5 ml / 1 c. à thé)"]
+        function generateList() {
+            const liElements = ingredients.map(ingredient => {
+                const element = document.createElement('li');
+                element.innerHTML = `<li>${ingredient}</li>`;
+                return element;
+            });
+            const parent = document.getElementById("parent");
+            parent.innerHTML = '';
+            parent.append(...liElements);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Génération de HTML dynamique avec map</h3>
+    <h4>Recette de Gâteau moelleux au chocolat</h4>
+    <ul id="parent"></ul>
+    <button id="generator" onclick="generateList()">
+        Générer la liste
+    </button>
+</body>
+
+</html>
