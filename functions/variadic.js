@@ -29,6 +29,11 @@ const longestString = findLongest("a", "b", "abc", "abcdef");
 console.log(longestString); // abcdef
 
 /// Autres utilisation de l'opérateur spread : Math.min(...values)
-const arr = [1,2,42,1523,-2,33];
+const arr = [1, 2, 42, 1523, -2, 33];
 const min = Math.min(...arr);
 console.log(min);
+
+/// spread peut être utilisé pour copier les valeurs d'un objet dans un autre
+const vec2 = { x: 1, y: 2 };
+const vec3 = { ...vec2, z: 3 };
+console.log(vec3); // { x: 1, y: 2, z: 3 }
