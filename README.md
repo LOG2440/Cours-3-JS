@@ -12,11 +12,11 @@ Le répertoire [variables](./variables/) contient les notions de base des diffé
 
 ## Fonctions
 
-Le répertoire [functions](./functions/) contient les notions de base du fonctionnement des fonctions en JS. Consultez le fichier [introduction.js](./functions/introduction.js) comme point de départ.
+Le répertoire [functions](./functions/) contient les notions de base du fonctionnement des fonctions en JS. Consultez son [README](./functions/README.MD) pour plus d'information.
 
 ## Objets
 
-Le répertoire [object](./object/) contient les notions de base des objets en JS ainsi que la syntaxe `class` d'`ES2015`.
+Le répertoire [object](./object/) contient les notions de base des objets en JS ainsi que la syntaxe `class` d'`ES2015`. Consultez son [README](./object/README.MD) pour plus d'information.
 
 
 ## Tableaux
