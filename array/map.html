@@ -17,7 +17,7 @@
         function generateList() {
             const liElements = ingredients.map(ingredient => {
                 const element = document.createElement('li');
-                element.innerHTML = `<li>${ingredient}</li>`;
+                element.textContent = `${ingredient}`;
                 return element;
             });
             const parent = document.getElementById("parent");
