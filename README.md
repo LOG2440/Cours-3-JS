@@ -1,15 +1,24 @@
-# Exemples de code JavaScript
+# JavaScript
 
-Cet entrepôt contient les différents exemples de code vues en classe.
+Cet entrepôt contient les différents exemples de code vues en classe sur les notions du langage JavaScript.
+
+## Types
+
+Le répertoire [types](./types/) contient les notions de base des différents types en JS. Consultez son [README](./types/README.MD) pour plus d'information.
+
+## Variables
+
+Le répertoire [variables](./variables/) contient les notions de base des différentes manières de déclarer des variables en JS (post et pré `ES2015`).
+
+## Fonctions
+
+Le répertoire [functions](./functions/) contient les notions de base du fonctionnement des fonctions en JS. Consultez son [README](./functions/README.MD) pour plus d'information.
+
+## Objets
+
+Le répertoire [object](./object/) contient les notions de base des objets en JS ainsi que la syntaxe `class` d'`ES2015`. Consultez son [README](./object/README.MD) pour plus d'information.
 
 
-# Exercices
+## Tableaux
 
-Certains projets contient des exercices ainsi que leurs solutions :
-
-- Le répertoire `team_manager` et le fichier `script.js` contiennent un exercice sur les fermetures et la différence entre `var` et `let`
-- Le répertoire `button_handler` et le fichier `button_handler.js` contiennent un exercice sur l'objet `this` et les fonctions fléchées (`arrow function`)
-- Le répertoire `bank_account` et le fichier `bank_account.js` contiennent un exercice sur les IIFE et la syntaxe `class` de JS.
-- Le fichier `customMap.js` contient un exercice sur les prototypes et l'implémentation de la méthode `map` des tableaux JS
-
-
+Le répertoire [array](./array/) contient des notions de base sur l'utilisation des tableaux et surtout les méthodes d'itération des tableaux. Consultez son [README](./array/README.MD) pour plus d'information.
