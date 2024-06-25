@@ -1,8 +1,8 @@
 /*
-  La syntaxe class rend le JS similaires à d'autres langages orientées objet (C++,Java,etc)
+  La syntaxe class rend le JS similaire à d'autres langages orientées objet (C++,Java,etc)
   Les classes utilisent la notion des prototypes quand même : attention à this
   Il est possible d'hériter d'une classe avec le mot clé extends
-  Nouveau depuis ES2022 : propriétés privées
+  Depuis ES2022 : propriétés privées
     Nom débute par # (caractère obligatoire)
     Lance une erreur si on essaie de les utiliser
     Non-accessibles par les classes enfant

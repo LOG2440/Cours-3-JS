@@ -1,8 +1,8 @@
 /*
     L'héritage en JS se fait à travers la notion de Prototype qui est une autre instance d'objet JS
     Chaque objet a une chaîne de prototypes (1 à la fois) jusqu'à "null"
-    Si on cherche un attribut d'un objet et on ne le trouve pas sur l'bojet, on remonte dans la chaîne jusqu'à la fin
-    Modifier le prototype d’un objet affecte toutes les instances avec le même prototype
+    Si on cherche un attribut d'un objet et on ne le trouve pas sur l'objet, on remonte dans la chaîne jusqu'à la fin
+    Modifier le prototype d’un objet affecte toutes les instances ayant le même prototype
 */
 
 // Partage de méthodes à travers le Prototype
