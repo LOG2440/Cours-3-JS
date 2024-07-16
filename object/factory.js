@@ -1,6 +1,6 @@
 /*
     Une fonction using (Factory) retourne un simple objet (prototype = Object)
-    Le mot clé "new" n'est pas nécessaires
+    Le mot clé "new" n'est pas nécessaire
     Attention : contrairement à une constructeur, this ne fait pas référence à l'objet retourné
 */
 

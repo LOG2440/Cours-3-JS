@@ -1,6 +1,7 @@
 /*
     La coercition de type est faite implicitement par JS.
     3 types : string, boolean et number
+    Un objet doit être converti en primitive pour être comparés
 */
 
 /// Coercition en String

@@ -2,10 +2,10 @@
 
 Les tableaux en JS sont des objets de type `Array` avec quelques propriétés particulières 
 
-- Les propriétés ont des noms de type `number` et l'accès se fait avec la notation [_index_]
-  - Ex : array[0] <- Premier élément du tableau
+- Les propriétés ont des noms de type `number` et l'accès se fait avec la notation `array[index]`
+  - Ex : `array[0]` <- Premier élément du tableau
 - La propriété `length` indique la taille du tableau. La mettre à 0  vide le tableau
-- delete array[_index_] remplace la valeur à index par `undefined` au lieu de la retirer de l’objet
+- `delete array[index]` remplace la valeur à index par `undefined` au lieu de la retirer de l’objet
 
 Le fichier [array.js](./array.js) contient des exemples de la syntaxe de base des tableaux JS.
 
@@ -22,12 +22,17 @@ La version `ES5` du langage a introduit plusieurs méthodes génériques de l'ob
 Les fichiers suivants présentent les méthodes les plus utilisées :
 
 - [find](./find.js) : Recherche dans un tableau
-- [filter](./filter.js) : Filtrage d'un tableau 
+  - Retourne le premier élément qui satisfait une condition ou `undefined`
+- [filter](./filter.js) : Filtrage d'un tableau
+  - Retourne un tableau contenant les éléments qui satisfont une condition 
 - [sort](./sort.js) : Tri d'un tableau
+  - Retourne un tableau trié selon une fonction de comparaison. Le tableau initial est également modifié.
 - [forEach](./forEach.js) : Application d'une fonction sur chaque élément
+  - Modifie le tableau initial.
 - [map](./map.js) : Application d'un transformateur sur chaque élément
   - [map.html](./map.html) : Exemple de génération dynamique d'éléments HTML avec `map`
 - [reduce](./reduce.js) : Réduction d'un tableau à une seule variable
+  - Méthode la plus flexible : peut être utilisée pour implémenter toutes lea autres méthodes d'itération.
 
 
 ## Les méthodes de copies

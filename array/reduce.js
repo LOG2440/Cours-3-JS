@@ -2,6 +2,7 @@
 	La fonction reduce applique une fonction de reduction sur chaque élément et retourne une seule valeur
 		La fonction de réduction prend un accumulateur qui est passé à chaque prochain appel
 		On peut avoir une valeur initiale pour l'accumulateur
+	Sémantiquement équivalent à : for ... of ... avec un accumulateur
 	Reduce peut être utilisé pour toutes les autres fonctions d'itération, mais n'est pas toujours le meilleur choix
 	consultez cette section pour plus d'information :
 		https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#when_to_not_use_reduce

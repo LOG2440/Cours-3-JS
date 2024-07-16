@@ -79,16 +79,3 @@ looseClick(); // undefined clicked
 // Utilisation de bind() : lorsque la fonction sera appelée, "this" fera référence à myButton 
 const boundClick = myButton.click.bind(myButton);
 boundClick(); //OK clicked
-
-/*
-  Exemple de this dynamique ou prédéfini avec un bouton
-  HTML : <button id ='btn'>Cliquez ici!</button>
-*/
-function printThis() {
-  console.log(`Source : ${this}`);
-}
-//"Source : [object HTMLButtonElement]"
-document.getElementById("btn").addEventListener("click", printThis);
-
-// "Source : [object Window]"
-document.getElementById("btn").addEventListener("click", printThis.bind(this)); 

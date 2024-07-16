@@ -19,7 +19,7 @@ foo.constructor === Foo; // ceci est TRUE
 Object.getPrototypeOf(foo) === Foo.prototype; // également TRUE
 ```
 
-Si on ajoute un attribut au prototype d'un objet (ou son constructeur), cet attribut sera accessible à toutes les instances créés par la fonction constructeur, même celles ayant été créées avant la modification du prototype. Exemple :
+Si on ajoute un attribut au prototype d'un objet (ou son constructeur), cet attribut sera accessible par toutes les instances créées par la fonction constructeur, même celles ayant été créées avant la modification du prototype. Exemple :
 
 ```js
 function Foo() {};
@@ -46,11 +46,11 @@ Voir le fichier [factory.js](./factory.js) pour un exemple.
 
 ## Mixin
 
-JS limite à un seul prototype par objet et il n'est donc pas possible d'avoir de l'héritage multiple pour un objet.
+JS limite à un seul prototype par objet et il n'est donc pas possible d'avoir de l'héritage multiple.
 
-Il est cependant possible de mélanger (_mix_) plusieurs objets ensemble afin qu'un objet ait accès aux attributs d'un autre objet. Cette approche s'appelle des _mixin_. Un _mixin_ est un objet destiné à  être copié dans un autre.
+Il est cependant possible de mélanger (_mix_) plusieurs objets ensemble afin qu'un objet ait accès aux attributs d'un autre objet. Cette approche s'appelle des _mixin_. Un _mixin_ est un objet destiné à être copié dans un autre.
 
-Il y a plusieurs approches possibles : transférer les propriétés d'un objet à travers l'objet `this` dans une fonction constructeur ou en faisant avec une copie avec `Object.assign(destination,source)`. Dans les deux cas, la chaînes des prototypes n'est pas modifiée, mais peut l'être par la suite.
+Il y a plusieurs approches possibles : transférer les propriétés d'un objet à travers l'objet `this` dans une fonction constructeur ou en faisant avec une copie avec `Object.assign(destination,source)`. Dans les deux cas, la chaîne des prototypes n'est pas modifiée, mais peut l'être par la suite.
 
 Voir le fichier [mixin.js](./mixin.js) pour un exemple.
 

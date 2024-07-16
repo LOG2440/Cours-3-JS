@@ -1,5 +1,5 @@
 /*
-    JS permet de déclarer des fonctions à travers des expressions qui sont assignés à une variable.
+    JS permet de déclarer des fonctions à travers des expressions qui sont assignées à une variable.
     L'expression peut être anonyme (sans nom).
     IIFE (Immediately Invoked Function Expression) : fonction créée et exécutée en même temps sans une référence permenante.
 */

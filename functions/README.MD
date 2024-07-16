@@ -62,11 +62,11 @@ Voir le fichier [expression.js](./expression.js) pour l'exemple plus haut.
 
 Les fonctions fléchées (_arrow function_) sont une manière plus concise à écrire des expressions de fonctions, surtout dans le cas de fonctions à usage unique.
 
-Leur nom vient de leur syntaxe : `(arg1,argN) => { statement1; statementN}`.
+Leur nom vient de leur syntaxe : `(arg1,argN) => { statement1; statementN;}`.
 
 Dans le cas d'un seul argument (mais pas 0), les `( )` peuvent être omises.
 
-Dans le cas d'un seul statement, les `{ }` ainsi que le `return` peuvent être omis. À noter que si on retourne un objet, il faut garder ces éléments ou entourer l'objet de `( )` pour éviter la confusion des paranthèses. Exemple :
+Dans le cas d'un seul *statement*, les `{ }` ainsi que le `return` peuvent être omis. À noter que si on retourne un objet, il faut garder ces éléments ou entourer l'objet de `( )` pour éviter la confusion des paranthèses. Exemple :
 
 ```js 
 addToObj = (val) => { return {value: val}};

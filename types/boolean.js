@@ -10,8 +10,8 @@ function isGreater(a, b) {
     console.log(result);
 }
 
-console.log(isGreater(10, 4)); // 10 est plus grand que 4
-console.log(isGreater(2, 5)); // 2 est plus petit que 5
+isGreater(10, 4); // 10 est plus grand que 4
+isGreater(2, 5); // 2 est plus petit que 5
 
 function isTruthy(value) {
     if (value) {

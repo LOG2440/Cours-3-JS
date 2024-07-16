@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objet this</title>
+</head>
+
+<body>
+    <main>
+        <h1>Exemple de this hors contexte avec la fonction <code>bind</code></h1>
+        <button id="btn">Cliquez-moi</button>
+        <section id="output"></section>
+    </main>
+
+    <script>
+        function printThis() {
+            const p = document.createElement("p");
+            p.innerText = `Source : ${this}`;
+            document.getElementById("output").appendChild(p);
+        }
+        //"Source : [object HTMLButtonElement]"
+        document.getElementById("btn").addEventListener("click", printThis);
+
+        // "Source : [object Window]"
+        document.getElementById("btn").addEventListener("click", printThis.bind(this)); 
+    </script>
+</body>
+
+</html>

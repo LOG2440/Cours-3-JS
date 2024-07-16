@@ -1,7 +1,8 @@
 /*
-    Tableau : objet qui contient un nombre arbitraire des valeurs (primitives ou non)
+    Tableau : objet qui contient un nombre arbitraire de valeurs (primitives ou non)
     Les valeurs peuvent être accédées à travers un index représenté par un entier positif
     L'index initial est de 0 : arr[0] et l'index final est arr.length-1
+    La fonction any(index) introduite en ES2022 permet des index négatifs qui commencent à la fin 
     Mettre l'attribut length à 0 vide le tableau
     Le tableau est un dequeue et peut être manipulé des 2 exterémités
     Les méthodes de copie d'un tableau donnent toujours un shallow-copy
@@ -41,3 +42,6 @@ console.log(arr); // [0, 2, 3, 5]
 
 arr.length = 0; // vider le tableau
 console.log(arr); // []
+
+arr = [1, 2, 3];
+console.log(`${arr.at(-1)} ${arr.at(-2)}`); // 3 2

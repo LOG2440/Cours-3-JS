@@ -75,6 +75,6 @@ console.log(carF.color); // red
 
 const car2 = new Car("Nissan", "GT-R", 2007, { cylinders: 6 });
 
-car2.hasOwnProperty("color"); // false : la propriété "color" est sur le Prototype
-car2.color; // red
-car2['color']; // red : Notation tableau rarement utilisée
+console.log(car2.hasOwnProperty("color")); // false : la propriété "color" est sur le Prototype
+console.log(car2.color); // red
+console.log(car2['color']); // red : Notation tableau rarement utilisée

@@ -28,7 +28,7 @@ function findLongest(...myArguments) {
 const longestString = findLongest("a", "b", "abc", "abcdef");
 console.log(longestString); // abcdef
 
-/// Autres utilisation de l'opérateur spread : Math.min(...values)
+/// Autres utilisations de l'opérateur spread : Math.min(...values)
 const arr = [1, 2, 42, 1523, -2, 33];
 const min = Math.min(...arr);
 console.log(min);
